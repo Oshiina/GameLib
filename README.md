@@ -1,1 +1,6 @@
-GameLib
+# GameLib
+
+
+## Requirements 
+
+json-simple
