@@ -49,13 +49,13 @@ public class Game {
 	@SuppressWarnings("unchecked")
 	private JSONObject createJsonGame() {
 		JSONObject gamedetails = new JSONObject();
-		gamedetails.put("Name", name);
 		if (note == -1)
-			gamedetails.put("Note", "not marked");
+			gamedetails.put("Note", "Not Marked");
 		else
 			gamedetails.put("Note", note);
 		gamedetails.put("State", state.toString());
 		gamedetails.put("Plateform", plateform.toString());
+		gamedetails.put("Name", name);
 		return gamedetails;
 	}
 
@@ -68,7 +68,7 @@ public class Game {
 	@SuppressWarnings("unchecked")
 	public JSONObject addJsonGame(JSONObject games) {
 		JSONObject game = createJsonGame();
-		games.put("game", game);
+		games.put(name, game);
 		return games;
 	}
 
