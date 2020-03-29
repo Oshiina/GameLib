@@ -15,7 +15,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage stage) {
 
-		StartWindow root = new StartWindow();
+		StartWindow root = new StartWindow(stage);
 		Scene scene = new Scene(root);
 		
 		stage.setTitle("GamesLib");

@@ -3,6 +3,7 @@ package ui;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
@@ -12,11 +13,15 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class StartWindow extends BorderPane{
+	
+	Stage stage;
 
-	public StartWindow() {
+	public StartWindow(Stage s) {
 		super();
+		stage = s;
 		
 		Group gr = new Group();
 		setCenter(gr);
@@ -53,6 +58,7 @@ public class StartWindow extends BorderPane{
         public void handle(ActionEvent e) 
         { 
            System.out.println("cc");
+           stage.setScene(new Scene(new Group(new Text("slt"))));
         } 
     };
 	
