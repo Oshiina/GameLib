@@ -10,7 +10,6 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -57,11 +56,11 @@ public class StartWindow extends BorderPane {
 
 	EventHandler<ActionEvent> eventNew = new EventHandler<ActionEvent>() {
 		public void handle(ActionEvent e) {
-			NewWindow nwindow = new NewWindow();
+			NewWindow nwindow = new NewWindow(stage);
 			Scene newScene = new Scene(nwindow,400,100);
-			Stage newStage = new Stage();
-			newStage.setScene(newScene);
-			newStage.show();
+			
+			stage.setScene(newScene);
+			stage.show();
 		}
 	};
 
