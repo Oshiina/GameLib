@@ -16,7 +16,7 @@ public class Main extends Application {
 	public void start(Stage stage) {
 
 		StartWindow root = new StartWindow(stage);
-		Scene scene = new Scene(root);
+		Scene scene = new Scene(root,600,300);
 		
 		stage.setTitle("GamesLib");
 		stage.setScene(scene);
@@ -26,6 +26,8 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		Application.launch(args);
 
+		/* crée un nouveau jeu pokemon et l'écrit dans le fichier games.json
+		/*
 		Game j = new Game("Pokemon");
 		JSONObject gameList = new JSONObject();
 		j.addJsonGame(gameList);
@@ -36,6 +38,6 @@ public class Main extends Application {
 
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 }
