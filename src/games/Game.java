@@ -12,7 +12,14 @@ public class Game {
 	public Game(String n) {
 		name = n;
 		note = -1;
-		state = StateGame.TO_DO;
+		state = StateGame.UNKNOWN;
+		plateform = PlateformGame.NOT_PRECISED;
+	}
+	
+	public Game(String n, StateGame stateg) {
+		name = n;
+		note = -1;
+		state = stateg;
 		plateform = PlateformGame.NOT_PRECISED;
 	}
 	
@@ -20,6 +27,13 @@ public class Game {
 		name = n;
 		note = -1;
 		state = StateGame.TO_DO;
+		plateform = Platf;
+	}
+	
+	public Game(String n, PlateformGame Platf, StateGame stateg) {
+		name = n;
+		note = -1;
+		state = stateg;
 		plateform = Platf;
 	}
 
@@ -34,6 +48,10 @@ public class Game {
 	public StateGame getState() {
 		return state;
 	}
+	
+	public PlateformGame getPlatform() {
+		return plateform;
+	}
 
 	public void noteChange(int n) {
 		note = n;
@@ -41,6 +59,10 @@ public class Game {
 
 	public void stateChange(StateGame s) {
 		state = s;
+	}
+	
+	public void plateformChange(PlateformGame p) {
+		plateform = p;
 	}
 
 	/**

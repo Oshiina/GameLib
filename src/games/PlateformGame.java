@@ -3,8 +3,11 @@ package games;
 public enum PlateformGame {
 	PC, SWITCH, NDS, N3DS, PSP, WII, NOT_PRECISED;
 
-	/*
-	PlateformGame strToPlatf(String s) {
+	PlateformGame modify(PlateformGame p) {
+			return p;
+		}
+	
+	PlateformGame modify(String s) {
 		switch (s) {
 		case "PC":
 			return PC;
@@ -23,5 +26,5 @@ public enum PlateformGame {
 			return NOT_PRECISED;
 		}
 	}
-	*/
+	
 }
